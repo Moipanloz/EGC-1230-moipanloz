@@ -16,8 +16,8 @@ install:
   - pip install codacy-coverage
 script:
   - cd decide
+  - cp travis_local_settings.py local_settings.py
   - python3 ./manage.py test census --keepdb --with-xunit
-  - python3 ./manage.py runserver
 deploy:
   provider: heroku
   app: egc-1230-moipanloz
