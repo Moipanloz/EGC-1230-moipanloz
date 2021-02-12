@@ -17,9 +17,10 @@ install:
 script:
   - cd decide
   - python3 ./manage.py test census --keepdb --with-xunit
+  - python3 ./manage.py runserver
 deploy:
   provider: heroku
-  app: <<your app name>>
+  app: egc-1230-moipanloz
   strategy: git
   api_key: $HEROKU_AUTH_TOKEN
 notifications:
