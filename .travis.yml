@@ -24,4 +24,7 @@ deploy:
   api_key: $HEROKU_AUTH_TOKEN
 notifications:
   email:
-    - moipanloz@alum.us.es
+    recipients:
+      - moipanloz@alum.us.es
+    on_success: always
+    on_failure: always
